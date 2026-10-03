@@ -1,0 +1,3 @@
+<?= view('partials/header', ['title' => $title]) ?>
+<div class="form-card"><p class="eyebrow">AUTHENTICATION</p><h1>Log In</h1><?php if ($message = session()->getFlashdata('error')): ?><div class="alert error"><?= esc($message) ?></div><?php endif; ?><form method="post" action="<?= site_url('login') ?>"><label>Username<input name="username" value="<?= old('username') ?>" required></label><label>Password<input type="password" name="password" required></label><button class="button" type="submit">Log In</button></form><p class="muted">Demo account: <code>demo</code> / <code>password123</code></p></div>
+<?= view('partials/footer') ?>
